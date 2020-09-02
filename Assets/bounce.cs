@@ -18,14 +18,11 @@ public class bounce : MonoBehaviour
     {
        colliding.Remove(collision.gameObject);
     }
-    void bounceObject(int timeNum)
+    void bounceObject()
     {
-        if(timeNum ==0)
-        {
             foreach (GameObject a in colliding)
             {
                 a.GetComponent<Rigidbody2D>().AddForce(up);
             }
-        }
     }
 }
